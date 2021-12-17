@@ -1,0 +1,34 @@
+{
+  "id": "af598531-39fd-49df-9c30-2a2ae9da7018",
+  "name": "project365 API Example",
+  "publisher": "ChrisBlankDe",
+  "version": "1.1.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "6003a675-2260-430c-9145-66701a1cf8e3",
+      "version": "19.0.0.0",
+      "name": "KUMAVISION project",
+      "publisher": "Kumavision AG"
+    }
+  ],
+  "screenshots": [],
+  "platform": "19.0.0.0",
+  "application": "19.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true
+  },
+  "runtime": "8.0"
+}

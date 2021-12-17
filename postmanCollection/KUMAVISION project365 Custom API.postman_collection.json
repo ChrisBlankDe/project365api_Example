@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "bffe3abe-fd1d-427a-83be-c46c19efe19e",
+		"name": "KUMAVISION project365 Custom API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Task Management",
+			"item": [
+				{
+					"name": "List workBreakdownStructures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/workBreakdownStructures?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"workBreakdownStructures"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get workBreakdownStructures Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/workBreakdownStructures(3e483028-3d2b-ec11-9310-b937cc5012cf)?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"workBreakdownStructures(3e483028-3d2b-ec11-9310-b937cc5012cf)"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List jobBudgetLines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/jobBudgetLines?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"jobBudgetLines"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Time Posting",
+			"item": [
+				{
+					"name": "List jobTimeJournals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/jobTimeJournals?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"jobTimeJournals"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Journal and List Lines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/jobTimeJournals?tenant={{Tenant}}&company={{CompanyId}}&$filter=code eq 'KUMA'&$expand=jobTimeJournalLines",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"jobTimeJournals"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								},
+								{
+									"key": "$filter",
+									"value": "code eq 'KUMA'"
+								},
+								{
+									"key": "$expand",
+									"value": "jobTimeJournalLines"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get jobTimeJournal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/jobTimeJournals(3f816121-0d2c-ec11-9310-a8eb48014efc)?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"jobTimeJournals(3f816121-0d2c-ec11-9310-a8eb48014efc)"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create jobTimeJournalLine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTimeJournalId\": \"3f816121-0d2c-ec11-9310-a8eb48014efc\",\r\n    \"lineNumber\": {{$randomInt}},\r\n    \"postingDate\": \"2021-11-12\",\r\n    \"toDoNo\": \"BA0000014\",\r\n    \"description\": \"Peter Paule\",\r\n    \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/jobTimeJournalLines?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"jobTimeJournalLines"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post jobTimeJournalLine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/kumavision/project/beta/jobTimeJournalLines(a5522945-4a5f-ec11-9330-97bd83eedbf4)/Microsoft.NAV.post?tenant={{Tenant}}&company={{CompanyId}}",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"kumavision",
+								"project",
+								"beta",
+								"jobTimeJournalLines(a5522945-4a5f-ec11-9330-97bd83eedbf4)",
+								"Microsoft.NAV.post"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "{{Tenant}}"
+								},
+								{
+									"key": "company",
+									"value": "{{CompanyId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List Entities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/kumavision/project/beta?tenant={{Tenant}}",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"kumavision",
+						"project",
+						"beta"
+					],
+					"query": [
+						{
+							"key": "tenant",
+							"value": "{{Tenant}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific Purchase Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/v2.0/purchaseOrders(52243233-5b2b-ec11-9310-a8eb48014efc)?tenant={{Tenant}}&company={{CompanyId}}",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"v2.0",
+						"purchaseOrders(52243233-5b2b-ec11-9310-a8eb48014efc)"
+					],
+					"query": [
+						{
+							"key": "tenant",
+							"value": "{{Tenant}}"
+						},
+						{
+							"key": "company",
+							"value": "{{CompanyId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/api/kumavision/project/beta/companies?tenant={{Tenant}}",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"kumavision",
+						"project",
+						"beta",
+						"companies"
+					],
+					"query": [
+						{
+							"key": "tenant",
+							"value": "{{Tenant}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "{{BasicAuthUser}}",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{BasicAuthPassword}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Host",
+			"value": "localhost",
+			"disabled": true
+		},
+		{
+			"key": "Port",
+			"value": "7048",
+			"disabled": true
+		},
+		{
+			"key": "Tenant",
+			"value": "default"
+		},
+		{
+			"key": "CompanyId",
+			"value": "f590445a-5d2a-ec11-9310-b937cc5012cf"
+		},
+		{
+			"key": "BaseUrl",
+			"value": "https://api.businesscentral.dynamics.com/v2.0/cronus.com/sandbox"
+		},
+		{
+			"key": "BasicAuthUser",
+			"value": ""
+		},
+		{
+			"key": "BasicAuthPassword",
+			"value": ""
+		}
+	]
+}
